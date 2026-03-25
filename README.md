@@ -4,6 +4,14 @@
 - **說明：**  
 此App為主啟動程式，由入口程式呼叫： `sof-ent` 。
 
+- **App啟動流程：**  
+THAS Sandbox啟動SMART App  
+→ 經OAuth2/OIDC授權  
+→ 從THAS FHIR取得Raw BMP  
+→ 呼叫Render上的/predict  
+→ 取得本次推論結果對應的Binary ID  
+→ 從THAS FHIR取回PNG/PDF顯示
+
 <br>
 
 ---
